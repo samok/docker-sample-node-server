@@ -10,7 +10,7 @@ pipeline {
 		stage('Deploy app on node') {
 			agent any
 			steps {
-				sh 'docker run -p 8090:8090 -itd samok/node-wb-app | cat container_id'
+				sh 'docker run -p 8090:8090 -itd samok/node-wb-app > container_id'
 			}
 		}
 	}
