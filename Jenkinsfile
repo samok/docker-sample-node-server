@@ -11,6 +11,7 @@ pipeline {
 			agent any
 			steps {
 				sh 'docker run -p 8090:8090 -itd samok/node-wb-app > container_id'
+				sh 'cat container_id'
 			}
 		}
 	}
