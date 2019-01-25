@@ -19,8 +19,8 @@ pipeline {
 		stage('Stop container') {
 			agent any
 			steps {
-				sh 'echo The End'
-				sh 'echo right'
+				sh 'docker stop $(cat ${WORKSPACE}/container_id)'
+				sh 'docker rm $(cat ${WORKSPACE}/container_id)'
 			}
 		}
 	}
