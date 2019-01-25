@@ -17,9 +17,9 @@ pipeline {
 				sh 'npm install @angular/cli'
 			}
 		}
-		// Lancer la batteries de tests sur la plateforme
-		stage('Test App') {
-		}
+		// TODO Lancer la batteries de tests sur la plateforme
+		//stage('Test App') {
+		//}
 		// Arreter et detruire le container
 		stage('Stop and Clean container') {
 			agent any
