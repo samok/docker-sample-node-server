@@ -19,7 +19,7 @@ pipeline {
 		stage('Stop container') {
 			agent any
 			steps {
-				sh "The End"
+				sh 'echo The End'
 			}
 		}
 	}
