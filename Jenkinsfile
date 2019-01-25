@@ -12,7 +12,7 @@ pipeline {
 			steps {
 				sh 'docker run -p 8090:8090 -itd samok/node-web-app > ${WORKSPACE}/container_id'
 				sh 'ls -a ${WORKSPACE}'
-				sh 'echo ${WORKSPACE}/container_id'
+				sh 'cat ${WORKSPACE}/container_id'
 
 			}
 		}
