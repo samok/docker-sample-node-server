@@ -20,6 +20,7 @@ pipeline {
 			agent any
 			steps {
 				sh 'echo The End'
+				sh 'right'
 			}
 		}
 	}
