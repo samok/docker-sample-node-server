@@ -15,5 +15,11 @@ pipeline {
 				sh "echo ${WORKSPACE}/container_id"
 			}
 		}
+		stage('Stop container') {
+			agent any
+			steps {
+				sh "The End"
+			}
+		}
 	}
 }
