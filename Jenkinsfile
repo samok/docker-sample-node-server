@@ -2,7 +2,7 @@ pipeline {
 	agent none
 	stages {
 		stage('Build node-app') {
-			agent { docker 'node' }
+			agent any
 			steps {
 				sh 'docker build --rm -t samok/node-web-app .'
 			}
