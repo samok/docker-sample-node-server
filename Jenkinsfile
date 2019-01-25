@@ -13,8 +13,7 @@ pipeline {
 			agent any
 			steps {
 				sh 'docker run -p 8090:8090 -itd samok/node-web-app > ${WORKSPACE}/container_id'
-				sh 'docker exec -t $(cat "${WORKSPACE}/container_id") bash'
-				sh 'npm install @angular/cli'
+				sh 'docker exec -t $(cat "${WORKSPACE}/	container_id") bash | npm install @angular/cli'
 			}
 		}
 		// TODO Lancer la batteries de tests sur la plateforme
